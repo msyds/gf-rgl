@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete QuestionKor of Question = CatKor ** open
   Prelude, ResKor, ParadigmsKor, (VS=VerbKor), (NS=NounKor), (SS=StructuralKor) in {
 

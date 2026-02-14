@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete NumeralKor of Numeral = CatKor [Numeral,Digits,Decimal] **
   open Prelude, ResKor in {
 

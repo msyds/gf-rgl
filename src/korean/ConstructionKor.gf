@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete ConstructionKor of Construction = CatKor ** open ParadigmsKor in {
 
 lincat

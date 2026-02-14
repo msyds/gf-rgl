@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete GrammarKor of Grammar =
   NounKor,
   VerbKor,

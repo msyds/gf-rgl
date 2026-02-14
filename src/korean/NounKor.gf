@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete NounKor of Noun = CatKor ** open ResKor, Prelude in {
 
   flags optimize=all_subs ;

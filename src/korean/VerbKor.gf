@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete VerbKor of Verb = CatKor ** open ResKor, AdverbKor, Prelude in {
 
 

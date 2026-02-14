@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete PhraseKor of Phrase = CatKor ** open Prelude, ResKor in {
 
   lin

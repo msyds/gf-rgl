@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 resource ParamKor = ParamX, Hangul ** open Prelude in {
 
 --------------------------------------------------------------------------------

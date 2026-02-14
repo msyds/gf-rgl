@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete RelativeKor of Relative = CatKor ** open
   ResKor, Prelude, (NS=NounKor), (SS=StructuralKor) in {
 

@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete SentenceKor of Sentence = CatKor ** open
   TenseX, ResKor, (AK=AdverbKor), Prelude in {
 

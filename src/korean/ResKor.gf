@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 resource ResKor = ParamKor ** open Prelude, Predef, ParamKor in {
 
 --------------------------------------------------------------------------------

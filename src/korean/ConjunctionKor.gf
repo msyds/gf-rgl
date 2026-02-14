@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete ConjunctionKor of Conjunction =
   CatKor ** open ResKor, Prelude in {
 

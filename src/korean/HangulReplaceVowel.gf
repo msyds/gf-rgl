@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 resource HangulReplaceVowel = open Prelude in {
 -- Machine generated, only to replace syllables with 으 as the vowel.
 oper

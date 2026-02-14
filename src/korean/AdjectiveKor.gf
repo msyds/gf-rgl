@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete AdjectiveKor of Adjective = CatKor **
   open ResKor, Prelude in {
 

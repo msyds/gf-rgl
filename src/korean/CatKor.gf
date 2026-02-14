@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete CatKor of Cat = CommonX ** open ResKor, Prelude in {
 
   flags optimize=all_subs ;

@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 resource ParadigmsKor = open CatKor, ResKor, ParamKor, NounKor, Prelude in {
 
 oper

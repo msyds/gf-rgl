@@ -1,4 +1,4 @@
---# -path=.:../common:../abstract
+--# -path=.:../common:../abstract:../prelude
 
 concrete ExtendKor of Extend = CatKor
   -- ** ExtendFunctor - [ApposNP]

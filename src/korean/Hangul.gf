@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 resource Hangul = HangulReplaceVowel ** open Prelude in {
 
 oper

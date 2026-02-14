@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete AdverbKor of Adverb = CatKor ** open ResKor, ParamKor, ParadigmsKor, Prelude in {
 
 lin

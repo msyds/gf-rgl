@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete StructuralKor of Structural = CatKor **
   open Prelude, ResKor, (N=NounKor), ParadigmsKor in {
 

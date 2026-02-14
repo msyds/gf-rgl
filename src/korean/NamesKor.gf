@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete NamesKor of Names = CatKor ** open ResKor in {
 
 lin GivenName, MaleSurname, FemaleSurname = \n -> n ;

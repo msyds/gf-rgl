@@ -1,3 +1,4 @@
+--# -path=.:../abstract:../common:../prelude
 
 --1 Idiom: Idiomatic Expressions
 

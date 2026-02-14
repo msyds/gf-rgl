@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 resource MissingKor = open GrammarKor, Prelude in {
 -- temporary definitions to enable the compilation of RGL API
 

@@ -1,3 +1,5 @@
+--# -path=.:../abstract:../common:../prelude
+
 concrete LexiconKor of Lexicon = CatKor **
   open ParadigmsKor, ResKor, StructuralKor in {
 
