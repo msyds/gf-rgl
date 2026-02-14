@@ -5,3 +5,7 @@ dist/
 *.pgf
 *.tmp
 *~
+.direnv
+_grph[pt]_*.dot
+_grph[pt]_*.png
+_grph[pt]_all.pdf
