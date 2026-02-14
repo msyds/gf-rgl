@@ -1,10 +1,11 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    gf.url = "github:anka-213/cclaw-nix-stuff/nix-flakes";
+    # gf.url = "github:anka-213/cclaw-nix-stuff/nix-flakes";
+    sydpkgs.url = "git+https://git.deertopia.net/msyds/sydpkgs";
   };
 
-  outputs = { self, nixpkgs, gf, ... }@inputs:
+  outputs = { self, nixpkgs, sydpkgs, ... }@inputs:
     let
       supportedSystems = [
         "aarch64-darwin"
@@ -17,7 +18,8 @@
 	pkgs = import nixpkgs {
 	  inherit system;
 	  overlays = [
-	    (final: prev: { inherit (gf.packages.${system}) gf-core; })
+	    # (final: prev: { inherit (gf.packages.${system}) gf-core; })
+	    sydpkgs.overlays.default
 	  ];
 	};
 	inherit (pkgs) lib;
@@ -43,6 +45,7 @@
 	    inputsFrom = [ self.packages.${system}.default ];
 	    packages = [
 	      gf-lsp.gf-lsp
+	      pkgs.gftest
 	      pkgs.graphviz
 	      pkgs.imagemagick
 	    ];

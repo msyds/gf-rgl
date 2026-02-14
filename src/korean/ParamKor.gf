@@ -9,7 +9,7 @@ resource ParamKor = ParamX, Hangul ** open Prelude in {
 oper
 
   vowFinal : Str -> Bool = \str ->
-    case str of {_ + #v => True ; _ => False} ;
+    case str of {_ + #jungseong => True ; _ => False} ;
 
 --------------------------------------------------------------------------------
 -- Morphophonology
@@ -22,9 +22,9 @@ oper
 param
   NForm =
       Bare     -- no case particle
-    | Topic    -- 은 or 는
-    | Subject  -- 이 or 가
-    | Object   -- 을 or 를
+    | Topic    -- 은 or 는
+    | Subject  -- 이 or 가
+    | Object   -- 을 or 를
     ;
 
   Phono = Vowel | Consonant ; -- Whether the word ends in vowel or consonant.
@@ -34,9 +34,9 @@ oper
   allomorph : NForm -> Str -> Str = \nf,s ->
     let finalV : Bool = vowFinal s ;
     in case nf of {
-         Topic   => if_then_Str finalV "는" "은" ;
-         Subject => if_then_Str finalV "가" "이" ;
-         Object  => if_then_Str finalV "를" "을" ;
+         Topic   => if_then_Str finalV "는" "은" ;
+         Subject => if_then_Str finalV "가" "이" ;
+         Object  => if_then_Str finalV "를" "을" ;
          Bare    => []
       } ;
 --------------------------------------------------------------------------------
@@ -76,15 +76,15 @@ oper
      -- Special "conjunction": just put comma with NPs, no conjunction.
      -- Used in a specific (proprietary) application grammar, don't remove this.
     <Comma,NStar,_> => "," ;
-    <Comma,VStar,Consonant> => "이며" ;
-    <Comma,VStar,Vowel> => "며" ;
+    <Comma,VStar,Consonant> => "이며" ;
+    <Comma,VStar,Vowel> => "며" ;
 
     -- In the normal case, conjunctions are repeated after each element in ListX
     -- Conjunction is not an argument to BaseX and ConsX, it is added in ConjX.
     -- That's why we need a ConjType parameter to ListX categories.
-    <And,VStar,_> => "고" ;
-    <And,NStar,_> => "하고" ;
-    <Or,_,_> => "또는" -- TODO what is or for V/AP/S?
+    <And,VStar,_> => "고" ;
+    <And,NStar,_> => "하고" ;
+    <Or,_,_> => "또는" -- TODO what is or for V/AP/S?
   } ;
 
 --------------------------------------------------------------------------------
@@ -93,15 +93,15 @@ param
 
   Aspect =
       Generic      -- zero morpheme
-    | Habitual     -- 는
-    | Prospective  -- 겠
-    | Perfect      -- 었/았
+    | Habitual     -- 는
+    | Prospective  -- 겠
+    | Perfect      -- 었/았
     ;
 
   Style =
-      Formal  -- 하십시오체
-    | Polite  -- 해요체
-    | Plain   -- 해라체
+      Formal  -- 하십시오체
+    | Polite  -- 해요체
+    | Plain   -- 해라체
     ;
 
   SentenceType =

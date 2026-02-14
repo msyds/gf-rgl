@@ -11,7 +11,7 @@ oper
     } ;
 
   baseCounter : Counter = {
-    s = "개" ;
+    s = "개" ;
     origin = NK
     } ;
 
@@ -61,10 +61,10 @@ oper
 
   mkPron = overload {
     mkPron : (stem,poss : Str) -> Pronoun = \s,poss -> mkNoun s ** {
-      poss = mkQuant poss (poss ++ "것") ;
+      poss = mkQuant poss (poss ++ "것") ;
       } ;
     mkPron : (stem : Str) -> Pronoun = \s -> mkNoun s ** {
-      poss = mkQuant (s + "의") (s + "의" ++ "것") ;
+      poss = mkQuant (s + "의") (s + "의" ++ "것") ;
     }
   } ;
 --------------------------------------------------------------------------------
@@ -124,8 +124,8 @@ oper
     } ;
 
   plural : NForm => Str = table {
-    Bare => "들" ;
-    nf => "들" + allomorph nf "들"
+    Bare => "들" ;
+    nf => "들" + allomorph nf "들"
   } ;
 --------------------------------------------------------------------------------
 -- Postpositions
@@ -139,7 +139,7 @@ oper
     } ;
 
   emptyPP : Postposition = mkPrep [] ** {attaches=False} ;
-  datPP : Postposition = mkPrep "에게" ;
+  datPP : Postposition = mkPrep "에게" ;
 
 --------------------------------------------------------------------------------
 -- Adjectives
@@ -159,7 +159,7 @@ oper
   mkAdj : Str -> Adjective = \plain ->
     let v : Verb = mkVerb plain ;
         stem : Str = v.s ! VStem Pos ;
-        attrpos : Str = add_N stem ;
+        attrpos : Str = stem + "ᆫ" ;
      in v2a attrpos v ;
 
   mkAdjReg : (x1,_,_,x4 : Str) -> Adjective = \plain,polite,formal,attr ->
@@ -186,11 +186,11 @@ oper
   mkVerb : (plain : Str) -> Verb = \plain ->
     let stem = init plain ;
         informal = add_eo stem ; -- not used in grammar yet
-        polite = informal + "요" ;
+        polite = informal + "요" ;
         formal = case vowFinal stem of {
-                       True  => add_B stem + "니다" ;
-                       False => stem + "습니다" } ;
-        attrpos = stem + "는" ;
+                       True  => stem + "ᆸ니다" ;
+                       False => stem + "습니다" } ;
+        attrpos = stem + "는" ;
      in mkVerbReg plain polite formal attrpos ;
 
   mkVerb2 : (plain : Str) -> Verb2 = \plain -> vtov2 (mkVerb plain) ;
@@ -203,12 +203,12 @@ oper
   mkVerbReg : (x1,_,_,x4 : Str) -> Verb =
     \plain,polite,formal,attrpos ->
     let stem    = init plain ;
-        neg     = stem + "지" ;
-        attrneg = neg ++ "않는" ;
+        neg     = stem + "지" ;
+        attrneg = neg ++ "않는" ;
         planeg  = neg ++ negForms ! Plain ;
         polneg  = neg ++ negForms ! Polite ;
         formneg = neg ++ negForms ! Formal ;
-        impneg = neg ++ "마새요" ;
+        impneg = neg ++ "마새요" ;
      in mkVerbFull stem attrpos attrneg plain polite formal planeg polneg formneg impneg ;
 
   mkVerbFull : (x1,_,_,_,_,_,_,_,_,x10 : Str) -> Verb =
@@ -232,55 +232,55 @@ oper
     } ;
 
   copula : Verb = mkVerbFull
-    "이"
-    "인"
-    "아닌"
-    "이다"
-    "이에요"
-    "입니다"
-    "아니다"
-    "아니에요"
-    "아닙니다"
-    "있지마세요" ;
+    "이"
+    "인"
+    "아닌"
+    "이다"
+    "이에요"
+    "입니다"
+    "아니다"
+    "아니에요"
+    "아닙니다"
+    "있지마세요" ;
 
   copulaAfterVowel : Verb = copula ** {
     s = \\vf => case vf of {
-                  VAttr Pos     => "는" ; -- TODO just guessing
-                  VF Plain Pos  => "다" ;
-                  VF Polite Pos => "예요" ;
+                  VAttr Pos     => "는" ; -- TODO just guessing
+                  VF Plain Pos  => "다" ;
+                  VF Polite Pos => "예요" ;
                   _ => copula.s ! vf }
   } ;
 
   have_V : Verb = mkVerbFull
-    "있"
-    "있는"
-    "없는"
-    "있다"
-    "있어요"
-    "있습니다"
-    "없다"
-    "없어요"
-    "없습니다"
-    "없지 마새요" ;
+    "있"
+    "있는"
+    "없는"
+    "있다"
+    "있어요"
+    "있습니다"
+    "없다"
+    "없어요"
+    "없습니다"
+    "없지 마새요" ;
 
   -- For building an adjective. Different attr from do_V.
   do_A : Verb = mkVerbReg
-    "하다"
-    "해요"
-    "합니다"
-    "한" ;
+    "하다"
+    "해요"
+    "합니다"
+    "한" ;
   hada_A = do_A ; -- Exposing both names (hada=transliteration, do=translation)
 
   do_V : Verb = mkVerbReg
-    "하다"
-    "해요"
-    "합니다"
-    "하는" ;
+    "하다"
+    "해요"
+    "합니다"
+    "하는" ;
 
   negForms : Style => Str =
-    table { Plain => "않다" ;
-            Polite => "않아요" ;
-            Formal => "않습니다" } ;
+    table { Plain => "않다" ;
+            Polite => "않아요" ;
+            Formal => "않습니다" } ;
 
 ------------------
 -- Adv
@@ -343,7 +343,7 @@ oper
   insertComp : VPSlash -> NounPhrase -> VerbPhrase = \v2,np -> useV v2 ** {
     nObj = table {
       DeclObj => np.s ! v2.c2 ++ v2.p2.s ! np.p ;
-      ImpObj => np.s ! Object ++ v2.p2.s ! np.p } -- use 을/를 always for imperative
+      ImpObj => np.s ! Object ++ v2.p2.s ! np.p } -- use 을/를 always for imperative
   } ;
 
   insertAdv : VerbPhrase -> SS -> VerbPhrase = \vp,adv -> vp ** {adv = adv.s ++ vp.adv} ;
