@@ -52,6 +52,12 @@ apiModules = ["Try","Symbolic","Syntax","Constructors","Combinators"]
 
 clone :: [String] -> String -> String -> String -> String -> (String, String) -> IO ()
 clone options fromdir todir from to (absname,absfx) = do
+  printf "clone options=%s\n\
+         \      fromdir=%s\n\
+         \      todir=%s\n\
+         \      from=%s\n\
+         \      to=%s\n" (show options) (show fromdir)
+         (show todir) (show from) (show to)
   s <- readFile (fromdir ++ "/" ++ absname ++ from ++ absfx ++ ".gf")
   writeAndReportFile (todir ++ "/" ++ absname ++ to ++ absfx ++ ".gf") (commentIf options (replaceLang from to s))
 
