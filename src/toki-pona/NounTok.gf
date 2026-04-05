@@ -9,7 +9,7 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 
 -- : Det -> CN -> NP
     DetCN det cn = emptyNP ** {
-      s = cn.s ! det.n ++ det.s
+      s = cn.s ++ det.s
       } ;
 {-
   -- : PN -> NP ;
@@ -65,8 +65,7 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 
   -- : Quant -> Num -> Det ;
     DetQuant quant num = quant ** {
-      s = quant.s ! num.n ++ num.s ;
-      n = num.n ;
+      s = quant.s ++ num.s
       } ;
 
   -- : Quant -> Num -> Ord -> Det ;
@@ -80,9 +79,6 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 -- All parts of the determiner can be empty, except $Quant$, which is
 -- the "kernel" of a determiner. It is, however, the $Num$ that determines
 -- the inherent number.
-
-  NumSg = {s = [] ; n = Sg} ;
-  NumPl = {s = [] ; n = Pl} ;
 
 {-
   -- : Card -> Num ;    -- two

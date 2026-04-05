@@ -43,10 +43,10 @@ lin there_Adv = ss "" ;
 -- which means that there are two fields for the strings, and
 -- n:Number which specifies the number of the resulting NP.
 
-lin and_Conj = {s1 = [] ; s2 = "and" ; n = Pl} ;
+lin and_Conj = {s1 = [] ; s2 = "and" } ;
 -- lin or_Conj =
 -- lin if_then_Conj =
-lin both7and_DConj = {s1 = "both" ; s2 = "and" ; n = Pl} ;
+lin both7and_DConj = {s1 = "both" ; s2 = "and" } ;
 -- lin either7or_DConj =
 
 -- lin but_PConj =

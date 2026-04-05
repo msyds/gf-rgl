@@ -73,7 +73,7 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
 
 -- Constructed in StructuralTok.
     Conj = Coordination.ConjunctionDistr ** {
-        n : Number -- The number of the NP that results from
+        -- n : Number -- The number of the NP that results from
                    -- coordinating a list of NPs with that Conj.
         } ;        -- "[Ann and Bob] are children" → and_Conj.n = Pl
     Subj = SS ;
