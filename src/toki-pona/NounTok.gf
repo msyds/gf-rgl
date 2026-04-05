@@ -23,9 +23,9 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
   -- : Pron -> NP ;
   -- Assuming that lincat Pron = lincat NP
   UsePron pron = pron ;
-{-
+
   -- : Predet -> NP -> NP ; -- only the man
-  PredetNP predet np =
+  -- PredetNP predet np =
 
 -- A noun phrase can also be postmodified by the past participle of a
 -- verb, by an adverb, or by a relative clause
@@ -37,21 +37,21 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
   -- } ;
 
   -- : NP -> Adv -> NP ;    -- Paris today
-  AdvNP np adv = np ** {
-    s = np.s ++ "," ++ adv.s
-  } ;
+  -- AdvNP np adv = np ** {
+  --   s = np.s ++ "," ++ adv.s
+  -- } ;
 
   -- : NP -> Adv -> NP ;    -- boys, such as ..
-  ExtAdvNP np adv = AdvNP np {s = "," ++ adv.s} ;
+  -- ExtAdvNP np adv = AdvNP np {s = "," ++ adv.s} ;
 
   -- : NP -> RS -> NP ;    -- Paris, which is here
-    RelNP np rs = np ** {
+    -- RelNP np rs = np ** {
 
-      } ;
+    --   } ;
 
 -- Determiners can form noun phrases directly.
 
--}
+
   -- : Det -> NP ;
     DetNP det = emptyNP ** {
       s = det.s
@@ -86,10 +86,10 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 -- the "kernel" of a determiner. It is, however, the $Num$ that determines
 -- the inherent number.
 
-{-
   -- : Card -> Num ;    -- two
   NumCard card = card ;
 
+{-
   -- : Digits  -> Card ;
   NumDigits dig = -- probably like OrdDigits, but choose the NCard form
 
@@ -129,12 +129,8 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
   -- : Quant
   IndefArt = mkQuant [] ;
 
-{-
   -- : Pron -> Quant        -- my
-  PossPron pron = mkQuant pron.s ** {
-
-    } ;
--}
+  PossPron pron = mkQuant pron.s ;
 
 --2 Common nouns
 

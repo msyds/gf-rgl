@@ -51,23 +51,22 @@ lin
   UseCl t p cl = {
     s = cl.subj ++ t.s ++ p.s ++ cl.pred ! p.p
     } ;
-{-
+
   -- : Temp -> Pol -> QCl -> QS ;
-  UseQCl t p cl =
+  -- UseQCl t p cl =
 
   -- : Temp -> Pol -> RCl -> RS ;
-  UseRCl t p cl =
+  -- UseRCl t p cl =
 
   -- AdvS : Adv -> S  -> S ;            -- then I will go home
-  AdvS adv s =
+  -- AdvS adv s =
 
   -- ExtAdvS : Adv -> S  -> S ;         -- next week, I will go home
-  ExtAdvS adv s =
+  -- ExtAdvS adv s =
 
   -- : S -> Subj -> S -> S ;
-  SSubjS s1 subj s2 =
+  -- SSubjS s1 subj s2 =
 
   --  : S -> RS -> S ;              -- she sleeps, which is good
-  RelS sent rs =
--}
+  -- RelS sent rs =
 }

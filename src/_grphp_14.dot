@@ -30,65 +30,65 @@ n28 -- n27;
  
 subgraph {rank=same;
   n5[label="i_Pron : Pron"]; 
-  n10[label="SlashVV : VPSlash"]; 
-  n26[label="AdvNP : NP"]; 
+  n19[label="VPSlashPrep : VPSlash"]; 
+  n26[label="DetCN : NP"]; 
   edge[style="invis"]; 
-  n5  --  n10  --  n26 ;
+  n5  --  n19  --  n26 ;
 }
 n6 -- n5;
-n27 -- n10;
+n27 -- n19;
 n27 -- n26;
  
 subgraph {rank=same;
-  n7[label="want_VV : VV"]; 
-  n9[label="SlashV2a : VPSlash"]; 
-  n16[label="DetCN : NP"]; 
-  n25[label="PrepNP : Adv"]; 
+  n17[label="ComplVV : VP"]; 
+  n18[label="in_Prep : Prep"]; 
+  n23[label="DetQuant : Det"]; 
+  n25[label="UseN : CN"]; 
   edge[style="invis"]; 
-  n7  --  n9  --  n16  --  n25 ;
+  n17  --  n18  --  n23  --  n25 ;
 }
-n10 -- n7;
-n10 -- n9;
-n26 -- n16;
+n19 -- n17;
+n19 -- n18;
+n26 -- n23;
 n26 -- n25;
  
 subgraph {rank=same;
-  n8[label="eat_V2 : V2"]; 
-  n15[label="UseN : CN"]; 
-  n17[label="in_Prep : Prep"]; 
-  n24[label="DetCN : NP"]; 
+  n7[label="want_VV : VV"]; 
+  n16[label="ComplSlash : VP"]; 
+  n21[label="PossPron : Quant"]; 
+  n24[label="house_N : N"]; 
   edge[style="invis"]; 
-  n8  --  n15  --  n17  --  n24 ;
+  n7  --  n16  --  n21  --  n24 ;
 }
-n9 -- n8;
-n16 -- n15;
-n25 -- n17;
+n17 -- n7;
+n17 -- n16;
+n23 -- n21;
 n25 -- n24;
  
 subgraph {rank=same;
-  n14[label="apple_N : N"]; 
-  n21[label="DetQuant : Det"]; 
-  n23[label="UseN : CN"]; 
+  n9[label="SlashV2a : VPSlash"]; 
+  n15[label="DetCN : NP"]; 
+  n20[label="i_Pron : Pron"]; 
   edge[style="invis"]; 
-  n14  --  n21  --  n23 ;
+  n9  --  n15  --  n20 ;
 }
+n16 -- n9;
+n16 -- n15;
+n21 -- n20;
+ 
+subgraph {rank=same;
+  n8[label="eat_V2 : V2"]; 
+  n14[label="UseN : CN"]; 
+  edge[style="invis"]; 
+  n8  --  n14 ;
+}
+n9 -- n8;
 n15 -- n14;
-n24 -- n21;
-n24 -- n23;
  
 subgraph {rank=same;
-  n19[label="PossPron : Quant"]; 
-  n22[label="house_N : N"]; 
-  edge[style="invis"]; 
-  n19  --  n22 ;
+  n13[label="apple_N : N"]; 
 }
-n21 -- n19;
-n23 -- n22;
- 
-subgraph {rank=same;
-  n18[label="i_Pron : Pron"]; 
-}
-n19 -- n18;
+n14 -- n13;
  
 edge[style="dashed"]; node[shape="plaintext"]; 
 subgraph {rank=same;
@@ -105,11 +105,11 @@ subgraph {rank=same;
 }
 n5 -- n100000;
 n7 -- n100001;
-n10 -- n100002;
+n17 -- n100002;
 n8 -- n100003;
-n14 -- n100004;
-n17 -- n100005;
-n18 -- n100006;
-n22 -- n100007;
+n13 -- n100004;
+n18 -- n100005;
+n20 -- n100006;
+n24 -- n100007;
  
 }

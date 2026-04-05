@@ -1,106 +1,99 @@
 graph {
 edge[style="solid"]; node[shape="plaintext"]; 
 subgraph {rank=same;
-  n37[label="PhrUtt : Phr"]; 
+  n32[label="PhrUtt : Phr"]; 
 }
  
 subgraph {rank=same;
-  n35[label="UttS : Utt"]; 
+  n30[label="UttS : Utt"]; 
 }
-n37 -- n35;
+n32 -- n30;
  
 subgraph {rank=same;
-  n34[label="UseCl : S"]; 
+  n29[label="UseCl : S"]; 
 }
-n35 -- n34;
- 
-subgraph {rank=same;
-  n33[label="PredVP : Cl"]; 
-}
-n34 -- n33;
- 
-subgraph {rank=same;
-  n6[label="UsePron : NP"]; 
-  n32[label="ComplSlash : VP"]; 
-  edge[style="invis"]; 
-  n6  --  n32 ;
-}
-n33 -- n6;
-n33 -- n32;
- 
-subgraph {rank=same;
-  n5[label="i_Pron : Pron"]; 
-  n10[label="SlashVV : VPSlash"]; 
-  n31[label="DetCN : NP"]; 
-  edge[style="invis"]; 
-  n5  --  n10  --  n31 ;
-}
-n6 -- n5;
-n32 -- n10;
-n32 -- n31;
- 
-subgraph {rank=same;
-  n7[label="want_VV : VV"]; 
-  n9[label="SlashV2a : VPSlash"]; 
-  n30[label="ApposCN : CN"]; 
-  edge[style="invis"]; 
-  n7  --  n9  --  n30 ;
-}
-n10 -- n7;
-n10 -- n9;
-n31 -- n30;
- 
-subgraph {rank=same;
-  n8[label="eat_V2 : V2"]; 
-  n15[label="UseN : CN"]; 
-  n29[label="AdvNP : NP"]; 
-  edge[style="invis"]; 
-  n8  --  n15  --  n29 ;
-}
-n9 -- n8;
-n30 -- n15;
 n30 -- n29;
  
 subgraph {rank=same;
-  n14[label="apple_N : N"]; 
-  n28[label="PrepNP : Adv"]; 
-  edge[style="invis"]; 
-  n14  --  n28 ;
+  n28[label="PredVP : Cl"]; 
 }
-n15 -- n14;
 n29 -- n28;
  
 subgraph {rank=same;
-  n20[label="in_Prep : Prep"]; 
-  n27[label="DetCN : NP"]; 
+  n6[label="UsePron : NP"]; 
+  n27[label="ComplVV : VP"]; 
   edge[style="invis"]; 
-  n20  --  n27 ;
+  n6  --  n27 ;
 }
-n28 -- n20;
+n28 -- n6;
 n28 -- n27;
  
 subgraph {rank=same;
-  n24[label="DetQuant : Det"]; 
-  n26[label="UseN : CN"]; 
+  n5[label="i_Pron : Pron"]; 
+  n7[label="want_VV : VV"]; 
+  n26[label="ComplSlash : VP"]; 
   edge[style="invis"]; 
-  n24  --  n26 ;
+  n5  --  n7  --  n26 ;
 }
-n27 -- n24;
+n6 -- n5;
+n27 -- n7;
 n27 -- n26;
  
 subgraph {rank=same;
-  n22[label="PossPron : Quant"]; 
-  n25[label="house_N : N"]; 
+  n9[label="SlashV2a : VPSlash"]; 
+  n25[label="AdvNP : NP"]; 
   edge[style="invis"]; 
-  n22  --  n25 ;
+  n9  --  n25 ;
 }
-n24 -- n22;
+n26 -- n9;
 n26 -- n25;
  
 subgraph {rank=same;
-  n21[label="i_Pron : Pron"]; 
+  n8[label="eat_V2 : V2"]; 
+  n15[label="DetCN : NP"]; 
+  n24[label="PrepNP : Adv"]; 
+  edge[style="invis"]; 
+  n8  --  n15  --  n24 ;
 }
+n9 -- n8;
+n25 -- n15;
+n25 -- n24;
+ 
+subgraph {rank=same;
+  n14[label="UseN : CN"]; 
+  n16[label="in_Prep : Prep"]; 
+  n23[label="DetCN : NP"]; 
+  edge[style="invis"]; 
+  n14  --  n16  --  n23 ;
+}
+n15 -- n14;
+n24 -- n16;
+n24 -- n23;
+ 
+subgraph {rank=same;
+  n13[label="apple_N : N"]; 
+  n20[label="DetQuant : Det"]; 
+  n22[label="UseN : CN"]; 
+  edge[style="invis"]; 
+  n13  --  n20  --  n22 ;
+}
+n14 -- n13;
+n23 -- n20;
+n23 -- n22;
+ 
+subgraph {rank=same;
+  n18[label="PossPron : Quant"]; 
+  n21[label="house_N : N"]; 
+  edge[style="invis"]; 
+  n18  --  n21 ;
+}
+n20 -- n18;
 n22 -- n21;
+ 
+subgraph {rank=same;
+  n17[label="i_Pron : Pron"]; 
+}
+n18 -- n17;
  
 edge[style="dashed"]; node[shape="plaintext"]; 
 subgraph {rank=same;
@@ -117,11 +110,11 @@ subgraph {rank=same;
 }
 n5 -- n100000;
 n7 -- n100001;
-n10 -- n100002;
+n27 -- n100002;
 n8 -- n100003;
-n14 -- n100004;
-n20 -- n100005;
-n21 -- n100006;
-n25 -- n100007;
+n13 -- n100004;
+n16 -- n100005;
+n17 -- n100006;
+n21 -- n100007;
  
 }

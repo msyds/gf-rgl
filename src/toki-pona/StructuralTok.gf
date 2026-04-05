@@ -66,16 +66,16 @@ concrete StructuralTok of Structural = CatTok **
 -- lin most_Predet = {s = ""} ;
 
 -- lin few_Det = R.indefDet "" pl ;
--- lin many_Det = R.indefDet "" pl ;
--- lin much_Det = R.indefDet "" sg ;
+lin many_Det = ss "mute" ;
+lin much_Det = ss "mute" ;
 
 -- lin somePl_Det =
 -- lin someSg_Det =
 
--- lin no_Quant =
+lin no_Quant = mkQuant "ala" ;
 -- lin that_Quant = mkQuant "" ;
 lin this_Quant = mkQuant "ni" ;
--- lin which_IQuant = mkQuant "" ;
+-- lin which_IQuant = mkQuant "seme" ;
 
 -----
 -- NP
@@ -102,15 +102,15 @@ lin this_Quant = mkQuant "ni" ;
 -- lin by8means_Prep = mkPrep "" ;
 -- lin during_Prep = mkPrep "" ;
 -- lin except_Prep = mkPrep "" ;
--- lin for_Prep = mkPrep "" ;
--- lin from_Prep = mkPrep "" ;
+lin for_Prep = mkPrep "tawa" ;
+lin from_Prep = mkPrep "tan" ;
 -- lin in8front_Prep = mkPrep "" ;
--- lin in_Prep = mkPrep "" ;
+lin in_Prep = mkPrep "lon" ;
 -- lin on_Prep = mkPrep "" ;
 -- lin part_Prep = mkPrep ;
 -- lin possess_Prep = mkPrep "" ;
 -- lin through_Prep = mkPrep "" ;
--- lin to_Prep = mkPrep "k" ;
+lin to_Prep = mkPrep "tawa" ;
 -- lin under_Prep = mkPrep "" ;
 -- lin with_Prep = mkPrep "" ;
 -- lin without_Prep = mkPrep "" ;

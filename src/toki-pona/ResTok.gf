@@ -198,9 +198,6 @@ That's why I'm copying over the definition below, instead of the neater `LinNP :
 oper
   LinPrep : Type = {
     s : Str ;
-
-    -- If your language has both pre- and postpositions, you need an inherent parameter in Prep to record which one a given Prep is.
-    -- position : PreOrPost ;
     } ;
 
 

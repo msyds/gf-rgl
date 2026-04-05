@@ -1,60 +1,110 @@
 graph {
 edge[style="solid"]; node[shape="plaintext"]; 
 subgraph {rank=same;
-  n18[label="Phr"]; 
+  n32[label="PhrUtt : Phr"]; 
 }
  
 subgraph {rank=same;
-  n16[label="Utt"]; 
+  n30[label="UttS : Utt"]; 
 }
-n18 -- n16[label="dep#1"]; 
+n32 -- n30;
  
 subgraph {rank=same;
-  n15[label="S"]; 
+  n29[label="UseCl : S"]; 
 }
-n16 -- n15
+n30 -- n29;
  
 subgraph {rank=same;
-  n14[label="Cl"]; 
+  n28[label="PredVP : Cl"]; 
 }
-n15 -- n14[label="dep#2"]; 
+n29 -- n28;
  
 subgraph {rank=same;
-  n6[label="NP"]; 
-  n13[label="VP"]; 
+  n6[label="UsePron : NP"]; 
+  n27[label="AdvVP : VP"]; 
   edge[style="invis"]; 
-  n6  --  n13 ;
+  n6  --  n27 ;
 }
-n14 -- n6
-n14 -- n13[label="dep#1"]; 
+n28 -- n6;
+n28 -- n27;
  
 subgraph {rank=same;
-  n5[label="Pron"]; 
-  n8[label="VPSlash"]; 
+  n5[label="i_Pron : Pron"]; 
+  n17[label="ComplSlash : VP"]; 
+  n26[label="PrepNP : Adv"]; 
   edge[style="invis"]; 
-  n5  --  n8 ;
+  n5  --  n17  --  n26 ;
 }
-n6 -- n5
-n13 -- n8
+n6 -- n5;
+n27 -- n17;
+n27 -- n26;
  
 subgraph {rank=same;
-  n7[label="V2"]; 
+  n10[label="SlashVV : VPSlash"]; 
+  n16[label="DetCN : NP"]; 
+  n18[label="in_Prep : Prep"]; 
+  n25[label="DetCN : NP"]; 
+  edge[style="invis"]; 
+  n10  --  n16  --  n18  --  n25 ;
 }
-n8 -- n7
+n17 -- n10;
+n17 -- n16;
+n26 -- n18;
+n26 -- n25;
+ 
+subgraph {rank=same;
+  n7[label="want_VV : VV"]; 
+  n9[label="SlashV2a : VPSlash"]; 
+  n15[label="UseN : CN"]; 
+  n22[label="DetQuant : Det"]; 
+  n24[label="UseN : CN"]; 
+  edge[style="invis"]; 
+  n7  --  n9  --  n15  --  n22  --  n24 ;
+}
+n10 -- n7;
+n10 -- n9;
+n16 -- n15;
+n25 -- n22;
+n25 -- n24;
+ 
+subgraph {rank=same;
+  n8[label="eat_V2 : V2"]; 
+  n14[label="apple_N : N"]; 
+  n20[label="PossPron : Quant"]; 
+  n23[label="house_N : N"]; 
+  edge[style="invis"]; 
+  n8  --  n14  --  n20  --  n23 ;
+}
+n9 -- n8;
+n15 -- n14;
+n22 -- n20;
+n24 -- n23;
+ 
+subgraph {rank=same;
+  n19[label="i_Pron : Pron"]; 
+}
+n20 -- n19;
  
 edge[style="dashed"]; node[shape="plaintext"]; 
 subgraph {rank=same;
-  n100000[label="Pron
-I"]; 
-  n100001[label="Cl
-don't"]; 
-  n100002[label="V2
-know"]; 
+  n100000[label="I"]; 
+  n100001[label="want"]; 
+  n100002[label="to"]; 
+  n100003[label="eat"]; 
+  n100004[label="apples"]; 
+  n100005[label="in"]; 
+  n100006[label="my"]; 
+  n100007[label="house"]; 
   edge[style="invis"]; 
-  n100000  --  n100001  --  n100002 ;
+  n100000  --  n100001  --  n100002  --  n100003  --  n100004  --  n100005  --  n100006  --  n100007 ;
 }
 n5 -- n100000;
-n14 -- n100001;
-n7 -- n100002;
+n7 -- n100001;
+n10 -- n100002;
+n8 -- n100003;
+n14 -- n100004;
+n18 -- n100005;
+n19 -- n100006;
+n23 -- n100007;
  
 }

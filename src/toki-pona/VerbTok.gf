@@ -81,7 +81,9 @@ lin
   -- SlashV2VNP v2v np vps =
 
   -- : VP -> Adv -> VP ;  -- sleep here
-  -- AdvVP vp adv =
+  AdvVP vp adv = {
+    s = \\p => vp.s ! p ++ adv.s ;
+    } ;
 
   -- : AdV -> VP -> VP ;  -- always sleep
   -- AdVVP adv vp =
@@ -96,7 +98,9 @@ lin
   -- AdVVPSlash adv vps = vps ** { adv = adv.s ++ vps.adv } ;
 
   -- : VP -> Prep -> VPSlash ;  -- live in (it)
-  -- VPSlashPrep vp prep = vp ** {c2 = prep} ;
+  VPSlashPrep vp prep = {
+    s = \\p => vp.s ! p ++ prep.s
+    } ;
 
 
 --2 Complements to copula
