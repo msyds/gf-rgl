@@ -74,7 +74,7 @@ concrete StructuralTok of Structural = CatTok **
 
 -- lin no_Quant =
 -- lin that_Quant = mkQuant "" ;
--- lin this_Quant = mkQuant "" ;
+lin this_Quant = mkQuant "ni" ;
 -- lin which_IQuant = mkQuant "" ;
 
 -----
@@ -155,7 +155,7 @@ lin language_title_Utt = ss "toki pona" ;
 -------
 -- Verb
 
--- lin have_V2 =
+lin have_V2 = mkV "jo" ;
 
 lin can8know_VV = ss "ken" ;
 lin can_VV = ss "ken" ;

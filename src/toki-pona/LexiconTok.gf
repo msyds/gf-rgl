@@ -42,18 +42,18 @@ lin bird_N = mkN "waso" ;
 -- lin bone_N = mkN "" ;
 -- lin boot_N = mkN "" ;
 -- lin boss_N = mkN "" ;
--- lin book_N = mkN "" ;
+lin book_N = mkN "lipu" ;
 lin boy_N = mkN "mije" ;
 -- lin bread_N = mkN "" ;
--- lin break_V2 = mkV2 "" ;
+lin break_V2 = mkV2 "pakala" ;
 -- lin breast_N = mkN "" ;
 -- lin breathe_V = mkV "" ;
 -- lin broad_A = mkA "" ;
 -- lin brother_N2 = mkN "" ;
 -- lin brown_A = mkA "" ;
--- lin burn_V = mkV "" ;
+lin burn_V = mkV "seli" ;
 -- lin butter_N = mkN "" ;
--- lin buy_V2 = mkV2 "" ;
+lin buy_V2 = mkV2 "esun" ;
 
 ----
 -- C
@@ -75,7 +75,7 @@ lin boy_N = mkN "mije" ;
 -- lin cloud_N = mkN "" ;
 -- lin coat_N = mkN "" ;
 -- lin cold_A = mkA "" ;
--- lin come_V = mkV "" ;
+lin come_V = mkV "kama" ;
 -- lin computer_N = mkN "" ;
 -- lin correct_A = mkA "" ;
 -- lin count_V2 = mkV2 "" ;
@@ -104,13 +104,13 @@ lin dog_N = mkN "soweli" ;
 ----
 -- E
 
--- lin ear_N = mkN "" ;
--- lin earth_N = mkN "" ;
--- lin eat_V2 = mkV "" ;
+lin ear_N = mkN "kute" ;
+lin earth_N = mkN "ma" ;
+lin eat_V2 = mkV "eat" ;
 -- lin egg_N = mkN "" ;
 -- lin empty_A = mkA "" ;
 -- lin enemy_N = mkN "" ;
--- lin eye_N = mkN "" ;
+lin eye_N = mkN "lukin" ;
 
 ----
 -- F
@@ -127,7 +127,7 @@ lin dog_N = mkN "soweli" ;
 -- lin find_V2 = mkV2 "" ;
 -- lin fingernail_N = mkN "" ;
 -- lin fire_N = mkN "" ;
--- lin fish_N = mkN "" ;
+lin fish_N = mkN "kala" ;
 -- lin float_V = mkV "" ;
 -- lin floor_N = mkN "" ;
 -- lin flow_V = mkV "" ;
@@ -140,7 +140,7 @@ lin dog_N = mkN "soweli" ;
 -- lin freeze_V = mkV "" ;
 -- lin fridge_N = mkN "" ;
 -- lin friend_N = mkN "" ;
--- lin fruit_N = mkN "" ;
+lin fruit_N = mkN "kili" ;
 -- lin full_A = mkA "" ;
 -- --lin fun_AV
 
@@ -192,7 +192,7 @@ lin john_PN = mkPN "jan" "Jon" ;
 -- lin kill_V2 = mkV2 "" ;
 -- lin king_N = mkN "" ;
 -- lin knee_N = mkN "" ;
--- lin know_V2 = mkV2 "" ;
+lin know_V2 = mkV2 "sona" ;
 -- lin know_VQ = mkVQ (mkV "") ;
 -- lin know_VS = mkV "" ;
 
@@ -218,7 +218,7 @@ lin language_N = mkN "toki" ;
 -- lin lose_V2 = mkV2 "" ;
 -- lin louse_N = mkN "" ;
 lin love_N = mkN "olin" ;
--- lin love_V2 = mkV2 "olin" ;
+lin love_V2 = mkV2 "olin" ;
 
 ----
 -- M
@@ -227,7 +227,7 @@ lin love_N = mkN "olin" ;
 -- lin married_A2 = mkA2 (mkA "") ;
 -- lin meat_N = mkN "" ;
 -- lin milk_N = mkN "" ;
--- lin moon_N = mkN "" ;
+lin moon_N = mkN "mun" ;
 -- lin mother_N2 = mkN2 (mkN "") ;
 -- lin mountain_N = mkN "" ;
 -- lin mouth_N = mkN "" ;
@@ -236,7 +236,7 @@ lin love_N = mkN "olin" ;
 ----
 -- N
 
--- lin name_N = mkN "" ;
+lin name_N = mkN "nimi" ;
 -- lin narrow_A = mkA "" ;
 -- lin near_A = mkA "" ;
 -- lin neck_N = mkN "" ;

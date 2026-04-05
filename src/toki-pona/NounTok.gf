@@ -51,11 +51,11 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 
 -- Determiners can form noun phrases directly.
 
+-}
   -- : Det -> NP ;
     DetNP det = emptyNP ** {
-      s = \\_ => linDet det ;
+      s = det.s
       } ;
--}
   -- MassNP : CN -> NP ;
     MassNP cn = emptyNP ** {
       s = linCN cn

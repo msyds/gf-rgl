@@ -17,35 +17,34 @@ lin
       } ;
   } ;
 
-{-
   -- : SC -> VP -> Cl ;         -- that she goes is good
-  PredSCVP sc vp = ;
+  -- PredSCVP sc vp = ;
 
 --2 Clauses missing object noun phrases
   -- : NP -> VPSlash -> ClSlash ;
-  SlashVP =
+  -- SlashVP = \np,vps -> ss ()
 
   -- : ClSlash -> Adv -> ClSlash ;     -- (whom) he sees today
-  AdvSlash cls adv =
+  -- AdvSlash cls adv =
 
   -- : Cl -> Prep -> ClSlash ;         -- (with whom) he walks
-  SlashPrep cl prep = cl ** {c2 = prep} ;
+  -- SlashPrep cl prep = cl ** {c2 = prep} ;
 
 -- Imperatives
   -- : VP -> Imp ;
-  ImpVP vp =
+  -- ImpVP vp =
 
 --2 Embedded sentences
 
   -- : S  -> SC ;
-  EmbedS s =
+  -- EmbedS s =
 
   -- : QS -> SC ;
-  EmbedQS qs =
+  -- EmbedQS qs =
 
   -- : VP -> SC ;
-  EmbedVP vp =
--}
+  -- EmbedVP vp =
+
 --2 Sentences
 
   -- : Temp -> Pol -> Cl -> S ;

@@ -146,12 +146,12 @@ oper
     mkV : Str -> V = \s -> lin V (mkVerb s) ;
   } ;
 
-{-
-
   mkV2 = overload {
-    mkV2 : Str -> V2 = \s -> …
-    mkV2 : V -> Prep -> V2 = \s -> …
+    mkV2 : Str -> V2 = \s -> ss s
+    -- mkV2 : V -> Prep -> V2 = \s -> …
     } ;
+
+{-
 
   mkV3 = overload {
     mkV3 : V -> V3 = \s -> …
