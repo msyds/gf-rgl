@@ -119,15 +119,15 @@ concrete StructuralTok of Structural = CatTok **
 -- Pron
 
 -- Pronouns are closed class, no constructor in ParadigmsTok.
--- lin it_Pron =
-lin i_Pron = mkPron "mi" P1 ;
--- lin youPol_Pron =
-lin youSg_Pron = mkPron "sina" P2 ;
--- lin he_Pron =
--- lin she_Pron =
-lin we_Pron = mkPron "mi" P1 ;
-lin youPl_Pron = mkPron "sina" P2 ;
--- lin they_Pron =
+lin it_Pron     = ona_Pron ;
+lin i_Pron      = mi_Pron ;
+lin youPol_Pron = sina_Pron ;
+lin youSg_Pron  = sina_Pron ;
+lin he_Pron     = ona_Pron ;
+lin she_Pron    = ona_Pron ;
+lin we_Pron     = ona_Pron ;
+lin youPl_Pron  = sina_Pron ;
+lin they_Pron   = ona_Pron ;
 
 -- lin whatPl_IP =
 -- lin whatSg_IP =

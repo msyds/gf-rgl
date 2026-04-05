@@ -128,6 +128,10 @@ oper
       } ;
     } ;
 
+  mi_Pron : LinPron = mkPron "mi" P1 ;
+  sina_Pron : LinPron = mkPron "sina" P2 ;
+  ona_Pron : LinPron = mkPron "ona" P3 ;
+
 ---------------------------------------------
 -- NP
 
