@@ -6,3 +6,14 @@ dist/
 *.tmp
 *~
 .direnv
+_grphp_*.dot
+_grphp_*.png
+_grpht_*.dot
+_grpht_*.png
+_gftmp
+t.dot
+t.dot.png
+u.dot.png
+t.dot.*.png
+u.dot.*.png
+u.dot
