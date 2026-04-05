@@ -121,16 +121,16 @@ oper
     -- TODO: more overload instances
   } ;
 
-{-
   mkPN = overload {
-    mkPN : Str -> PN = …
+    mkPN : Str -> PN = \s -> ss s ;
   } ;
 
 --2 Adjectives
 
   mkA = overload {
-    mkA : Str -> A = \s -> …
+    mkA : Str -> A = \s -> ss s
   } ;
+{-
 
   mkA2 = overload {
     mkA2 : Str -> A2 = \s -> …

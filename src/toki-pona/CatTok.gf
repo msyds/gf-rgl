@@ -1,3 +1,4 @@
+--# -path=.:../abstract:../common:../prelude
 concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
 
   flags optimize=all_subs ;
@@ -51,7 +52,8 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
 
     CN = ResTok.LinCN ;
     NP = ResTok.LinNP ;
-    Pron = SS ; -- NB. Pronouns need enough info to become NP or Quant.
+    -- NB. Pronouns need enough info to become NP or Quant.
+    Pron = ResTok.LinPron ;
     Det = ResTok.LinDet ; -- s : Str , n : Number
     Predet = SS ;
     Quant = ResTok.LinQuant ; -- s : Number => Str
@@ -68,14 +70,12 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
 
     Numeral = ResTok.LinNumeral ;
     Digits = ResTok.LinNumeral ;
+    Decimal = SS ;
 
 --2 Structural words
 
 -- Constructed in StructuralTok.
-    Conj = Coordination.ConjunctionDistr ** {
-        -- n : Number -- The number of the NP that results from
-                   -- coordinating a list of NPs with that Conj.
-        } ;        -- "[Ann and Bob] are children" → and_Conj.n = Pl
+    Conj = Coordination.ConjunctionDistr ;
     Subj = SS ;
     Prep = SS ;
 

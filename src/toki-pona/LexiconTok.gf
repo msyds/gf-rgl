@@ -10,7 +10,7 @@ concrete LexiconTok of Lexicon = CatTok **
 -- lin already_Adv = mkA "" ;
 lin animal_N = mkN "soweli" ;
 -- lin answer_V2S = mkV2S (mkV "") ;
-lin apartment_N = mkN "taso" ;
+lin apartment_N = mkN "tomo" ;
 -- lin apple_N = mkN "" ;
 -- lin art_N = mkN "" ;
 -- lin ashes_N = mkN "" ;
@@ -153,7 +153,7 @@ lin dog_N = mkN "soweli" ;
 -- lin glove_N = mkN "" ;
 -- lin go_V = mkV "" ;
 -- lin gold_N = mkN "" ;
--- lin good_A = mkA "" ;
+-- lin good_A = mkA "pona" ;
 -- lin grammar_N = mkN "" ;
 -- lin grass_N = mkN "" ;
 -- lin green_A = mkA "" ;
@@ -202,7 +202,7 @@ lin dog_N = mkN "soweli" ;
 
 -- lin lake_N = mkN "" ;
 -- lin lamp_N = mkN "" ;
--- lin language_N = mkN "" ;
+lin language_N = mkN "toki" ;
 -- lin laugh_V = mkV "" ;
 -- lin leaf_N = mkN "" ;
 -- lin learn_V2 = mkV2 "" ;
@@ -217,8 +217,8 @@ lin dog_N = mkN "soweli" ;
 -- lin long_A = mkA "" ;
 -- lin lose_V2 = mkV2 "" ;
 -- lin louse_N = mkN "" ;
--- lin love_N = mkN "" ;
--- lin love_V2 = mkV2 "" ;
+lin love_N = mkN "olin" ;
+-- lin love_V2 = mkV2 "olin" ;
 
 ----
 -- M
@@ -281,7 +281,7 @@ lin play_V = mkV "musi" ;
 -- lin read_V2 = mkV2 "" ;
 -- lin ready_A = mkA "" ;
 -- lin reason_N = mkN "" ;
--- lin red_A = mkA "loje" ;
+lin red_A = mkA "loje" ;
 -- lin religion_N = mkN "" ;
 -- lin restaurant_N = mkN "" ;
 -- lin river_N = mkN "" ;

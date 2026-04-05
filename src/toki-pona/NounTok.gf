@@ -11,15 +11,15 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
     DetCN det cn = emptyNP ** {
       s = cn.s ++ det.s
       } ;
-{-
+
   -- : PN -> NP ;
   -- Assuming that lincat PN = lincat NP
-  UsePN pn = pn ;
+  -- UsePN pn = pn ;
 
   -- : Pron -> NP ;
   -- Assuming that lincat Pron = lincat NP
   UsePron pron = pron ;
-
+{-
   -- : Predet -> NP -> NP ; -- only the man
   PredetNP predet np =
 

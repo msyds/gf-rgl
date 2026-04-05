@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1775036866,
+        "narHash": "sha256-ZojAnPuCdy657PbTq5V0Y+AHKhZAIwSIT2cb8UgAz/U=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6201e203d09599479a3b3450ed24fa81537ebc4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1750386251,
+        "narHash": "sha256-1ovgdmuDYVo5OUC5NzdF+V4zx2uT8RtsgZahxidBTyw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "076e8c6678d8c54204abcb4b1b14c366835a58bb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "sydpkgs": "sydpkgs"
+      }
+    },
+    "sydpkgs": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1771299872,
+        "narHash": "sha256-+OPW1SKKHT7aqhyjs2O20gd1MXa7LyD+9/lwMUCVL7Y=",
+        "ref": "refs/heads/main",
+        "rev": "53bf019e26478666ab7f458f78e569b8b106cc1f",
+        "revCount": 36,
+        "type": "git",
+        "url": "https://git.deertopia.net/msyds/sydpkgs"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.deertopia.net/msyds/sydpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

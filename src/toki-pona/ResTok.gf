@@ -1,3 +1,4 @@
+--# -path=.:../abstract:../common:../prelude
 resource ResTok = open Prelude, Predef in {
 
 --------------------------------------------------------------------------------
@@ -50,6 +51,8 @@ https://inariksit.github.io/gf/2018/08/28/gf-gotchas.html#my-naming-scheme-for-l
 
 param
   Person = P1 | P2 | P3 ;
+
+  LiSubject = MiSina | NotMiSina ;
 
 oper
   LinN : Type = {s : Str ;} ;
@@ -111,13 +114,18 @@ oper
   LinPron : Type = {
     s : Str ;
     p : Person ;
+    li : LiSubject ;
     -- Alternative to the `n` and `p` fields:
     -- a : Agr -- sketched above, lines 97-103
     } ;
 
   mkPron : (_ : Str) -> Person -> LinPron = \str,per -> {
     s = str ;
-    p = per
+    p = per ;
+    li = case str of {
+      "mi"|"sina" => MiSina ;
+      _ => NotMiSina
+      } ;
     } ;
 
 ---------------------------------------------
@@ -135,6 +143,8 @@ That's why I'm copying over the definition below, instead of the neater `LinNP :
   LinNP : Type = {
     s : Str ;
     p : Person ;
+    li : LiSubject ;
+
     -- Alternative to the `n` and `p` fields:
     -- a : Agr -- sketched on lines 97-101
     } ;
@@ -144,6 +154,7 @@ That's why I'm copying over the definition below, instead of the neater `LinNP :
   emptyNP : LinNP = { -- Change when you change LinNP
     s = [] ;
     p = P3 ;
+    li = NotMiSina
   } ;
 
 --------------------------------------------------------------------------------
@@ -234,6 +245,11 @@ oper
     subj : Str ;
     pred : Str ; -- TODO: depend on Temp and Pol
   } ;
+
+  -- linCl : LinCl -> Str = \cl -> case cl.subj of {
+  --   "mi"|"sina" => cl.subj ++ cl.pred ;
+  --   _ => cl.subj ++ "li" ++ cl.pred
+  --   } ;
 
   linCl : LinCl -> Str = \cl -> cl.subj ++ cl.pred ;
 
