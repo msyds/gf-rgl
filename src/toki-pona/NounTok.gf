@@ -77,7 +77,7 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 
     -- } ;
 
-    NumSg,NumPljk = ss [] ;
+    NumSg,NumPl = ss [] ;
 
 -- Whether the resulting determiner is singular or plural depends on the
 -- cardinal.
