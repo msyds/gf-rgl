@@ -35,8 +35,7 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
 --2 Verb phrases
 
 -- Constructed in VerbTok.
-    VP = ResTok.LinVP ;
-    VPSlash = SS ;
+    VP,VPSlash = ResTok.LinVP ;
     Comp = SS ;
 
 --2 Adjectival phrases
@@ -115,7 +114,7 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
     SN = SS ; -- Second name,   e.g. "Washington"
     LN = SS ; -- Location name, e.g. "Sweden"
 
-  linref
-    Cl = linCl ;
+  -- linref
+  --   Cl = linCl ;
 
 }

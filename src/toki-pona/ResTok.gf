@@ -1,5 +1,5 @@
 --# -path=.:../abstract:../common:../prelude
-resource ResTok = open Prelude, Predef in {
+resource ResTok = open Prelude, Predef, ParamX in {
 
 --------------------------------------------------------------------------------
 -- General notes
@@ -233,14 +233,14 @@ oper
 -- VP
 
   LinVP : Type = {
-    s : Str ;
+    s : Polarity => Str ;
     } ;
 
   LinVPSlash : Type = LinVP ** {
     c2 : LinPrep ;
     } ;
 
-  linVP : LinVP -> Str = \vp -> vp.s ;
+  -- linVP : LinVP -> Str = \vp -> vp.s ;
 
 --------------------------------------------------------------------------------
 -- Cl, S
@@ -248,7 +248,7 @@ oper
   -- Operations for clauses, sentences
   LinCl : Type = {
     subj : Str ;
-    pred : Str ; -- TODO: depend on Temp and Pol
+    pred : Polarity => Str ; -- TODO: depend on Temp and Pol
   } ;
 
   -- linCl : LinCl -> Str = \cl -> case cl.subj of {
@@ -256,7 +256,7 @@ oper
   --   _ => cl.subj ++ "li" ++ cl.pred
   --   } ;
 
-  linCl : LinCl -> Str = \cl -> cl.subj ++ cl.pred ;
+  -- linCl : LinCl -> Str = \cl -> cl.subj ++ cl.pred ;
 
 
 -- Preverb, VV  

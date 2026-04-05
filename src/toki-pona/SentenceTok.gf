@@ -11,9 +11,9 @@ lin
   -- : NP -> VP -> Cl
   PredVP np vp = {
     subj = np.s ; -- ! Nom, if there are cases
-    pred = case np.li of {
-      MiSina => vp.s ;
-      NotMiSina => "li" ++ vp.s
+    pred = \\pol => case np.li of {
+      MiSina => vp.s ! pol ;
+      NotMiSina => "li" ++ vp.s ! pol
       } ;
   } ;
 
@@ -49,7 +49,7 @@ lin
 
   -- : Temp -> Pol -> Cl -> S ;
   UseCl t p cl = {
-    s = cl.subj ++ t.s ++ p.s ++ cl.pred --  ! t.t ! p.p  -- eventually
+    s = cl.subj ++ t.s ++ p.s ++ cl.pred ! p.p
     } ;
 {-
   -- : Temp -> Pol -> QCl -> QS ;

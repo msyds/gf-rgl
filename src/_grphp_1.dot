@@ -1,0 +1,60 @@
+graph {
+edge[style="solid"]; node[shape="plaintext"]; 
+subgraph {rank=same;
+  n18[label="Phr"]; 
+}
+ 
+subgraph {rank=same;
+  n16[label="Utt"]; 
+}
+n18 -- n16[label="dep#1"]; 
+ 
+subgraph {rank=same;
+  n15[label="S"]; 
+}
+n16 -- n15
+ 
+subgraph {rank=same;
+  n14[label="Cl"]; 
+}
+n15 -- n14[label="dep#2"]; 
+ 
+subgraph {rank=same;
+  n6[label="NP"]; 
+  n13[label="VP"]; 
+  edge[style="invis"]; 
+  n6  --  n13 ;
+}
+n14 -- n6
+n14 -- n13[label="dep#1"]; 
+ 
+subgraph {rank=same;
+  n5[label="Pron"]; 
+  n8[label="VPSlash"]; 
+  edge[style="invis"]; 
+  n5  --  n8 ;
+}
+n6 -- n5
+n13 -- n8
+ 
+subgraph {rank=same;
+  n7[label="V2"]; 
+}
+n8 -- n7
+ 
+edge[style="dashed"]; node[shape="plaintext"]; 
+subgraph {rank=same;
+  n100000[label="Pron
+I"]; 
+  n100001[label="Cl
+don't"]; 
+  n100002[label="V2
+know"]; 
+  edge[style="invis"]; 
+  n100000  --  n100001  --  n100002 ;
+}
+n5 -- n100000;
+n14 -- n100001;
+n7 -- n100002;
+ 
+}

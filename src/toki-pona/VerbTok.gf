@@ -1,4 +1,4 @@
-concrete VerbTok of Verb = CatTok ** open ResTok, AdverbTok, Prelude in {
+concrete VerbTok of Verb = CatTok ** open ResTok, AdverbTok, Prelude, ParamX in {
 
 
 lin
@@ -8,7 +8,12 @@ lin
   -- : V -> VP
   -- NB. assumes that lincat V = lincat VP
   -- This will most likely change when you start working with VPs
-  UseV v = v ;
+  UseV v = {
+    s = table {
+      Pos => v.s ;
+      Neg => v.s ++ "ala"
+      } ;
+    } ;
 
   --  : V2 -> VP ;
   -- PassV2 v2 =
@@ -17,7 +22,7 @@ lin
   ReflVP vps = vps ;
 
   -- : VV  -> VP -> VP ;
-  ComplVV vv vp = { s = vv.s ++ vp.s ;} ;
+  ComplVV vv vp = { s = \\p => vv.s ++ vp.s ! p ;} ;
 
 {-
   -- : VS  -> S  -> VP ;
@@ -35,7 +40,12 @@ lin
 --------
 -- Slash
   -- : V2 -> VPSlash
-  SlashV2a v2 = v2 ;
+  SlashV2a = \v2 -> {
+    s = table {
+      Pos => v2.s ;
+      Neg => v2.s ++ "ala"
+      } ;
+    } ;
 
   -- : V3 -> NP -> VPSlash ; -- give it (to her)
   -- Slash2V3 v3 dobj =
@@ -60,11 +70,12 @@ lin
 
   -- : VPSlash -> NP -> VP
   -- Often VPSlash has a field called c2, which is used to pick right form of np complement
-  ComplSlash vps np = ss (vps.s ++ "e" ++ np.s) ;
+  ComplSlash vps np = {
+    s = \\p => vps.s ! p ++ "e" ++ np.s
+    } ;
 
   -- : VV  -> VPSlash -> VPSlash ;
-  -- SlashVV vv vps = ComplVV vv vps ** {
-  --   } ;
+  SlashVV vv vps = ComplVV vv vps;
 
   -- : V2V -> NP -> VPSlash -> VPSlash ; -- beg me to buy
   -- SlashV2VNP v2v np vps =

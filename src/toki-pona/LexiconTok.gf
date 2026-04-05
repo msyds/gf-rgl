@@ -11,7 +11,7 @@ concrete LexiconTok of Lexicon = CatTok **
 lin animal_N = mkN "soweli" ;
 -- lin answer_V2S = mkV2S (mkV "") ;
 lin apartment_N = mkN "tomo" ;
--- lin apple_N = mkN "" ;
+lin apple_N = mkN "kili" ;
 -- lin art_N = mkN "" ;
 -- lin ashes_N = mkN "" ;
 -- lin ask_V2Q = mkV2Q (mkV "") ;
@@ -106,7 +106,7 @@ lin dog_N = mkN "soweli" ;
 
 lin ear_N = mkN "kute" ;
 lin earth_N = mkN "ma" ;
-lin eat_V2 = mkV "eat" ;
+lin eat_V2 = mkV "moku" ;
 -- lin egg_N = mkN "" ;
 -- lin empty_A = mkA "" ;
 -- lin enemy_N = mkN "" ;
@@ -139,7 +139,7 @@ lin fish_N = mkN "kala" ;
 -- lin forget_V2 = mkV2 "" ;
 -- lin freeze_V = mkV "" ;
 -- lin fridge_N = mkN "" ;
--- lin friend_N = mkN "" ;
+lin friend_N = mkN "jan pona" ;
 lin fruit_N = mkN "kili" ;
 -- lin full_A = mkA "" ;
 -- --lin fun_AV

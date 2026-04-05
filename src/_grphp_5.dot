@@ -1,0 +1,47 @@
+graph {
+edge[style="solid"]; node[shape="plaintext"]; 
+subgraph {rank=same;
+  n20[label="PhrUtt : Phr"]; 
+}
+ 
+subgraph {rank=same;
+  n18[label="UttS : Utt"]; 
+}
+n20 -- n18;
+ 
+subgraph {rank=same;
+  n17[label="UseCl : S"]; 
+}
+n18 -- n17;
+ 
+subgraph {rank=same;
+  n16[label="PredVP : Cl"]; 
+}
+n17 -- n16;
+ 
+subgraph {rank=same;
+  n15[label="ComplSlash : VP"]; 
+}
+n16 -- n15;
+ 
+subgraph {rank=same;
+  n10[label="SlashV2a : VPSlash"]; 
+}
+n15 -- n10;
+ 
+subgraph {rank=same;
+  n9[label="know_V2 : V2"]; 
+}
+n10 -- n9;
+ 
+edge[style="dashed"]; node[shape="plaintext"]; 
+subgraph {rank=same;
+  n100000[label="don't"]; 
+  n100001[label="know"]; 
+  edge[style="invis"]; 
+  n100000  --  n100001 ;
+}
+n16 -- n100000;
+n9 -- n100001;
+ 
+}
