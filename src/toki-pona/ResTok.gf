@@ -258,4 +258,8 @@ oper
 
   linCl : LinCl -> Str = \cl -> cl.subj ++ cl.pred ;
 
+
+-- Preverb, VV  
+
+  Preverb = SS ;
 }

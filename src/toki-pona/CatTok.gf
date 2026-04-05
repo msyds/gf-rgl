@@ -93,7 +93,7 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
     V = ResTok.LinV ;
 
     VV     -- verb-phrase-complement verb         e.g. "want"
-      = SS ;
+      = ResTok.Preverb ;
 
     V2A,   -- verb with NP and AP complement      e.g. "paint"
     V2V,   -- verb with NP and V complement       e.g. "cause"

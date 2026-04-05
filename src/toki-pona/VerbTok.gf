@@ -10,16 +10,16 @@ lin
   -- This will most likely change when you start working with VPs
   UseV v = v ;
 
-{-
   --  : V2 -> VP ;
-  PassV2 v2 =
+  -- PassV2 v2 =
 
   -- : VPSlash -> VP ;
-  ReflVP vps =
+  -- ReflVP vps =
 
   -- : VV  -> VP -> VP ;
-  ComplVV vv vp =
+  ComplVV vv vp = { s = vv.s ++ vp.s ;} ;
 
+{-
   -- : VS  -> S  -> VP ;
   ComplVS vs s =
 

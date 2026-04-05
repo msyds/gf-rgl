@@ -157,10 +157,10 @@ lin language_title_Utt = ss "toki pona" ;
 
 -- lin have_V2 =
 
--- lin can8know_VV =  -- can (capacity)
--- lin can_VV =  -- can (possibility)
+lin can8know_VV = ss "ken" ;
+lin can_VV = ss "ken" ;
 -- lin must_VV =
--- lin want_VV =
+lin want_VV = ss "wile" ;
 
 ------
 -- Voc
