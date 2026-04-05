@@ -108,7 +108,7 @@ concrete CatTok of Cat = CommonX ** open ResTok, Coordination, Prelude in {
     N = ResTok.LinN ;
     N2 = ResTok.LinN ;
     N3 = ResTok.LinN ;
-    PN = SS ;
+    PN = ResTok.LinPN ;
 
     -- From the Names module, not in the official API as of 2023-08
     GN = SS ; -- Given name,    e.g. "George"

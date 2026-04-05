@@ -21,7 +21,7 @@ oper
   } ;
 
   mkPN : overload {
-    mkPN : Str -> PN ; -- Proper nouns
+    mkPN : Str -> Str -> PN ; -- Proper nouns
   } ;
 
 --2 Adjectives
@@ -122,7 +122,9 @@ oper
   } ;
 
   mkPN = overload {
-    mkPN : Str -> PN = \s -> ss s ;
+    mkPN : Str -> Str -> PN = \head,tail -> lin PN {
+      head = head; tail = tail
+      }
   } ;
 
 --2 Adjectives

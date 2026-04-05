@@ -147,7 +147,7 @@ lin they_Pron   = ona_Pron ;
 ------
 -- Utt
 
--- lin language_title_Utt = ss "" ;
+lin language_title_Utt = ss "toki pona" ;
 -- lin no_Utt = ss "" ;
 -- lin yes_Utt = ss "" ;
 

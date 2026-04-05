@@ -14,7 +14,11 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
 
   -- : PN -> NP ;
   -- Assuming that lincat PN = lincat NP
-  -- UsePN pn = pn ;
+  UsePN pn = {
+    s = pn.head ++ pn.tail ; 
+    p = P3 ;
+    li = NotMiSina ;
+    } ;
 
   -- : Pron -> NP ;
   -- Assuming that lincat Pron = lincat NP
@@ -204,4 +208,6 @@ concrete NounTok of Noun = CatTok ** open ResTok, Prelude in {
   DetDAP det = det ;
 -}
 
+  -- : AP -> CN -> CN
+  AdjCN = \ap,cn -> { s = cn.s ++ ap.s ;};
 }

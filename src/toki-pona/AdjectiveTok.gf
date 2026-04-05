@@ -10,14 +10,10 @@ concrete AdjectiveTok of Adjective = CatTok ** open ResTok, Prelude in {
   } ;
 
   -- : A  -> AP ;
-  PositA a = a ** {
-    compar = [] ;
-    } ;
+  PositA a = a ;
 
   -- : A  -> NP -> AP ;
-  ComparA a np = a ** {
-    compar = np.s
-    } ;
+  ComparA a np = a ; -- Not straightforward for Toki Pona.
 
   -- : A2 -> NP -> AP ;  -- married to her
   -- ComplA2 a2 np = a2 ** { } ;

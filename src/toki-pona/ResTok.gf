@@ -66,7 +66,8 @@ oper
     ;
 
   LinPN : Type = {
-    s : Str ;
+    head : Str ;
+    tail : Str
   } ;
 
   -- For inflection paradigms, see http://www.grammaticalframework.org/doc/tutorial/gf-tutorial.html#toc56
